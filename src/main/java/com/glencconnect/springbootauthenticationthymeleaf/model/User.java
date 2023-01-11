@@ -25,7 +25,7 @@ public class User {
                     referencedColumnName = "id"
             ),
             inverseJoinColumns = @JoinColumn(
-                    name = "user_id",
+                    name = "role_id",
                     referencedColumnName = "id"
             )
     )
