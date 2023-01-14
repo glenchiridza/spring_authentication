@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
   <meta charset="UTF-8">
   <title>HomePage</title>
@@ -10,7 +10,11 @@
 <div class="container mt-3">
 
 
-  <h1 class="alert alert-success">Hurray you are now logged in my man</h1>
+  <h1 class="alert alert-success">Hurray you are now logged in as
+    <span sec:authentication="principal.username">User</span> </h1>
+
+  How are you today
+
 
   <div class="form-group">
     <a th:href="@{/logout}">Logout</a>
