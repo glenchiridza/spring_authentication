@@ -1,9 +1,11 @@
 package com.glencconnect.springbootauthenticationthymeleaf.config;
 
 import com.glencconnect.springbootauthenticationthymeleaf.service.UserService;
+import com.glencconnect.springbootauthenticationthymeleaf.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -19,10 +21,10 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 public class SecurityConfiguration{
 
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
-    public SecurityConfiguration(UserService userService) {
+    public SecurityConfiguration(@Lazy UserService userService) {
         this.userService = userService;
     }
 
