@@ -17,6 +17,14 @@
             <div th:if="${param.success}">
                 <div class="alert alert-info">Registration successful</div>
             </div>
+            <!--end message success-->
+
+            <!--form-->
+            <form th:action="@{/registration}" method="post" th:object="${user}">
+
+            </form>
+            <!--end form-->
+
         </div>
     </div>
 </div>
