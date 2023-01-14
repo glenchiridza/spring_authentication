@@ -8,7 +8,18 @@
 <body>
 
 <!--create navigation bar-->
-<!--create html form-->
+<!--create html registration form-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+            <!-- success message-->
+            <div th:if="${param.success}">
+                <div class="alert alert-info">Registration successful</div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
