@@ -1,5 +1,6 @@
 package com.glencconnect.springbootauthenticationthymeleaf.web.dto;
 
+//data transfer object
 public class UserRegistrationDto {
     private String firstName;
     private String lastName;
